@@ -27,3 +27,619 @@
 [INFO ] 2025-01-14 16:06:36.184 [SpringApplicationShutdownHook] LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 [INFO ] 2025-01-14 16:06:36.185 [SpringApplicationShutdownHook] HikariDataSource - HikariPool-1 - Shutdown initiated...
 [INFO ] 2025-01-14 16:06:36.188 [SpringApplicationShutdownHook] HikariDataSource - HikariPool-1 - Shutdown completed.
+[INFO ] 2025-01-14 16:10:06.618 [background-preinit] Version - HV000001: Hibernate Validator 8.0.1.Final
+[INFO ] 2025-01-14 16:10:06.643 [main] TravelAgencyApplication - Starting TravelAgencyApplication using Java 21.0.2 with PID 13612 (C:\Users\Denys\Desktop\travel-agency\target\classes started by Denys in C:\Users\Denys\Desktop\travel-agency)
+[INFO ] 2025-01-14 16:10:06.646 [main] TravelAgencyApplication - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2025-01-14 16:10:07.232 [main] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2025-01-14 16:10:07.289 [main] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 52 ms. Found 5 JPA repository interfaces.
+[INFO ] 2025-01-14 16:10:07.867 [main] TomcatWebServer - Tomcat initialized with port 8080 (http)
+[INFO ] 2025-01-14 16:10:07.877 [main] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 2025-01-14 16:10:07.878 [main] StandardService - Starting service [Tomcat]
+[INFO ] 2025-01-14 16:10:07.879 [main] StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]
+[INFO ] 2025-01-14 16:10:07.928 [main] [/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2025-01-14 16:10:07.928 [main] ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1256 ms
+[INFO ] 2025-01-14 16:10:08.089 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2025-01-14 16:10:08.133 [main] Version - HHH000412: Hibernate ORM core version 6.4.1.Final
+[INFO ] 2025-01-14 16:10:08.158 [main] RegionFactoryInitiator - HHH000026: Second-level cache disabled
+[INFO ] 2025-01-14 16:10:08.326 [main] SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+[INFO ] 2025-01-14 16:10:08.349 [main] HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 2025-01-14 16:10:08.469 [main] HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@e7e455d
+[INFO ] 2025-01-14 16:10:08.471 [main] HikariDataSource - HikariPool-1 - Start completed.
+[WARN ] 2025-01-14 16:10:08.495 [main] deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+[INFO ] 2025-01-14 16:10:09.279 [main] JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[INFO ] 2025-01-14 16:10:09.358 [main] LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 2025-01-14 16:10:10.273 [main] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 2025-01-14 16:10:10.688 [main] DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1d306d27, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@557abb68, org.springframework.security.web.context.SecurityContextHolderFilter@62b3871, org.springframework.security.web.header.HeaderWriterFilter@23e0b938, org.springframework.web.filter.CorsFilter@1cb4cad0, org.springframework.security.web.authentication.logout.LogoutFilter@5dfaa2f0, com.denys.travel_agency.token.JwtAuthenticationFilter@120661d2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@273c4b3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@240a717d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3152d449, org.springframework.security.web.session.SessionManagementFilter@5016934, org.springframework.security.web.access.ExceptionTranslationFilter@2dbfcbe4, org.springframework.security.web.access.intercept.AuthorizationFilter@482034fb]
+[INFO ] 2025-01-14 16:10:11.124 [main] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 2025-01-14 16:10:11.136 [main] TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+[INFO ] 2025-01-14 16:10:11.142 [main] TravelAgencyApplication - Started TravelAgencyApplication in 4.728 seconds (process running for 5.398)
+[INFO ] 2025-01-14 16:11:15.771 [http-nio-8080-exec-1] [/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2025-01-14 16:11:15.771 [http-nio-8080-exec-1] DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2025-01-14 16:11:15.772 [http-nio-8080-exec-1] DispatcherServlet - Completed initialization in 1 ms
+[ERROR] 2025-01-14 16:11:15.849 [http-nio-8080-exec-3] [dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2025-01-11T00:06:20Z. Current time: 2025-01-14T14:11:15Z, a difference of 309895848 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:427) ~[jjwt-impl-0.11.5.jar:0.11.5]
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:529) ~[jjwt-impl-0.11.5.jar:0.11.5]
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:589) ~[jjwt-impl-0.11.5.jar:0.11.5]
+	at io.jsonwebtoken.impl.ImmutableJwtParser.parseClaimsJws(ImmutableJwtParser.java:173) ~[jjwt-impl-0.11.5.jar:0.11.5]
+	at com.denys.travel_agency.token.JwtService.extractAllClaims(JwtService.java:80) ~[classes/:?]
+	at com.denys.travel_agency.token.JwtService.extractClaims(JwtService.java:41) ~[classes/:?]
+	at com.denys.travel_agency.token.JwtService.extractUsername(JwtService.java:37) ~[classes/:?]
+	at com.denys.travel_agency.token.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:40) ~[classes/:?]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:225) ~[spring-security-config-6.2.1.jar:6.2.1]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+[ERROR] 2025-01-14 16:11:15.881 [http-nio-8080-exec-4] [dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2025-01-11T00:06:20Z. Current time: 2025-01-14T14:11:15Z, a difference of 309895881 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:427) ~[jjwt-impl-0.11.5.jar:0.11.5]
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:529) ~[jjwt-impl-0.11.5.jar:0.11.5]
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:589) ~[jjwt-impl-0.11.5.jar:0.11.5]
+	at io.jsonwebtoken.impl.ImmutableJwtParser.parseClaimsJws(ImmutableJwtParser.java:173) ~[jjwt-impl-0.11.5.jar:0.11.5]
+	at com.denys.travel_agency.token.JwtService.extractAllClaims(JwtService.java:80) ~[classes/:?]
+	at com.denys.travel_agency.token.JwtService.extractClaims(JwtService.java:41) ~[classes/:?]
+	at com.denys.travel_agency.token.JwtService.extractUsername(JwtService.java:37) ~[classes/:?]
+	at com.denys.travel_agency.token.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:40) ~[classes/:?]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:225) ~[spring-security-config-6.2.1.jar:6.2.1]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+[INFO ] 2025-01-14 16:11:28.245 [http-nio-8080-exec-6] ControllerLoggingAspect - Controller: AuthenticationController, Method: login called with arguments: [AuthenticationRequest(username=Admin, password=Denys2006)]
+[INFO ] 2025-01-14 16:11:28.503 [http-nio-8080-exec-6] ControllerLoggingAspect - Controller: AuthenticationController, Method: login executed successfully
+[INFO ] 2025-01-14 16:11:28.587 [http-nio-8080-exec-5] ControllerLoggingAspect - Controller: TourController, Method: findAllAvailableSortedBy called with arguments: [Page request [number: 0, size 16, sort: tourId: ASC], ]
+[INFO ] 2025-01-14 16:11:28.619 [http-nio-8080-exec-5] ControllerLoggingAspect - Controller: TourController, Method: findAllAvailableSortedBy executed successfully
+[INFO ] 2025-01-14 16:11:28.642 [http-nio-8080-exec-8] ControllerLoggingAspect - Controller: TourController, Method: findAllAvailableSortedBy called with arguments: [Page request [number: 0, size 16, sort: tourId: ASC], ]
+[INFO ] 2025-01-14 16:11:28.655 [http-nio-8080-exec-8] ControllerLoggingAspect - Controller: TourController, Method: findAllAvailableSortedBy executed successfully
+[INFO ] 2025-01-14 16:11:28.667 [http-nio-8080-exec-3] ControllerLoggingAspect - Controller: LocationController, Method: findById called with arguments: [aba9997c-cd6b-46b5-abfd-e8b40b39e032]
+[INFO ] 2025-01-14 16:11:28.667 [http-nio-8080-exec-7] ControllerLoggingAspect - Controller: LocationController, Method: findById called with arguments: [2fedae7b-7677-4034-baee-5351b1dcbefe]
+[INFO ] 2025-01-14 16:11:28.668 [http-nio-8080-exec-4] ControllerLoggingAspect - Controller: LocationController, Method: findById called with arguments: [d750981b-0ac0-43cf-906a-7978dda1e9dc]
+[INFO ] 2025-01-14 16:11:28.668 [http-nio-8080-exec-6] ControllerLoggingAspect - Controller: LocationController, Method: findById called with arguments: [75e720cc-15fa-49d8-9663-1ea4dc2f4d93]
+[INFO ] 2025-01-14 16:11:28.868 [http-nio-8080-exec-7] ControllerLoggingAspect - Controller: LocationController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:28.868 [http-nio-8080-exec-3] ControllerLoggingAspect - Controller: LocationController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:28.868 [http-nio-8080-exec-4] ControllerLoggingAspect - Controller: LocationController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:28.868 [http-nio-8080-exec-6] ControllerLoggingAspect - Controller: LocationController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:28.880 [http-nio-8080-exec-2] ControllerLoggingAspect - Controller: LocationController, Method: findById called with arguments: [d750981b-0ac0-43cf-906a-7978dda1e9dc]
+[INFO ] 2025-01-14 16:11:28.880 [http-nio-8080-exec-10] ControllerLoggingAspect - Controller: LocationController, Method: findById called with arguments: [2fedae7b-7677-4034-baee-5351b1dcbefe]
+[INFO ] 2025-01-14 16:11:28.881 [http-nio-8080-exec-5] ControllerLoggingAspect - Controller: LocationController, Method: findById called with arguments: [aba9997c-cd6b-46b5-abfd-e8b40b39e032]
+[INFO ] 2025-01-14 16:11:28.881 [http-nio-8080-exec-9] ControllerLoggingAspect - Controller: LocationController, Method: findById called with arguments: [75e720cc-15fa-49d8-9663-1ea4dc2f4d93]
+[INFO ] 2025-01-14 16:11:28.884 [http-nio-8080-exec-2] ControllerLoggingAspect - Controller: LocationController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:28.884 [http-nio-8080-exec-5] ControllerLoggingAspect - Controller: LocationController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:28.884 [http-nio-8080-exec-9] ControllerLoggingAspect - Controller: LocationController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:28.884 [http-nio-8080-exec-10] ControllerLoggingAspect - Controller: LocationController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:28.896 [http-nio-8080-exec-3] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById called with arguments: [a8315435-9c5b-4f38-8102-63f56cb9d0f9]
+[INFO ] 2025-01-14 16:11:28.896 [http-nio-8080-exec-6] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById called with arguments: [98e5c09c-e2a6-4ea6-aadc-13da28e3ed8a]
+[INFO ] 2025-01-14 16:11:28.897 [http-nio-8080-exec-7] ControllerLoggingAspect - Controller: LocationController, Method: findById called with arguments: [75e720cc-15fa-49d8-9663-1ea4dc2f4d93]
+[INFO ] 2025-01-14 16:11:28.897 [http-nio-8080-exec-1] ControllerLoggingAspect - Controller: LocationController, Method: findById called with arguments: [aba9997c-cd6b-46b5-abfd-e8b40b39e032]
+[INFO ] 2025-01-14 16:11:28.898 [http-nio-8080-exec-8] ControllerLoggingAspect - Controller: LocationController, Method: findById called with arguments: [d750981b-0ac0-43cf-906a-7978dda1e9dc]
+[INFO ] 2025-01-14 16:11:28.898 [http-nio-8080-exec-4] ControllerLoggingAspect - Controller: LocationController, Method: findById called with arguments: [2fedae7b-7677-4034-baee-5351b1dcbefe]
+[INFO ] 2025-01-14 16:11:28.900 [http-nio-8080-exec-7] ControllerLoggingAspect - Controller: LocationController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:28.900 [http-nio-8080-exec-1] ControllerLoggingAspect - Controller: LocationController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:28.902 [http-nio-8080-exec-4] ControllerLoggingAspect - Controller: LocationController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:28.903 [http-nio-8080-exec-3] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:28.903 [http-nio-8080-exec-6] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:28.903 [http-nio-8080-exec-8] ControllerLoggingAspect - Controller: LocationController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:28.914 [http-nio-8080-exec-10] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById called with arguments: [efcccb5e-10d0-44a8-9f60-c92f4ab8b724]
+[INFO ] 2025-01-14 16:11:28.915 [http-nio-8080-exec-1] ControllerLoggingAspect - Controller: LocationController, Method: findById called with arguments: [aba9997c-cd6b-46b5-abfd-e8b40b39e032]
+[INFO ] 2025-01-14 16:11:28.915 [http-nio-8080-exec-9] ControllerLoggingAspect - Controller: LocationController, Method: findById called with arguments: [75e720cc-15fa-49d8-9663-1ea4dc2f4d93]
+[INFO ] 2025-01-14 16:11:28.915 [http-nio-8080-exec-7] ControllerLoggingAspect - Controller: LocationController, Method: findById called with arguments: [d750981b-0ac0-43cf-906a-7978dda1e9dc]
+[INFO ] 2025-01-14 16:11:28.918 [http-nio-8080-exec-1] ControllerLoggingAspect - Controller: LocationController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:28.918 [http-nio-8080-exec-7] ControllerLoggingAspect - Controller: LocationController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:28.918 [http-nio-8080-exec-9] ControllerLoggingAspect - Controller: LocationController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:28.918 [http-nio-8080-exec-10] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:28.921 [http-nio-8080-exec-8] ControllerLoggingAspect - Controller: LocationController, Method: findById called with arguments: [2fedae7b-7677-4034-baee-5351b1dcbefe]
+[INFO ] 2025-01-14 16:11:28.926 [http-nio-8080-exec-4] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById called with arguments: [a8315435-9c5b-4f38-8102-63f56cb9d0f9]
+[INFO ] 2025-01-14 16:11:28.926 [http-nio-8080-exec-8] ControllerLoggingAspect - Controller: LocationController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:28.930 [http-nio-8080-exec-6] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById called with arguments: [3fb68426-3735-47e2-b1c6-8030be9f80eb]
+[INFO ] 2025-01-14 16:11:28.930 [http-nio-8080-exec-3] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById called with arguments: [8bfa7f17-0c18-45ec-817c-77cb2b439901]
+[INFO ] 2025-01-14 16:11:28.930 [http-nio-8080-exec-2] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById called with arguments: [98e5c09c-e2a6-4ea6-aadc-13da28e3ed8a]
+[INFO ] 2025-01-14 16:11:28.931 [http-nio-8080-exec-4] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:28.931 [http-nio-8080-exec-5] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById called with arguments: [efcccb5e-10d0-44a8-9f60-c92f4ab8b724]
+[INFO ] 2025-01-14 16:11:28.933 [http-nio-8080-exec-3] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:28.933 [http-nio-8080-exec-2] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:28.933 [http-nio-8080-exec-6] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:28.936 [http-nio-8080-exec-5] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:28.938 [http-nio-8080-exec-9] ControllerLoggingAspect - Controller: LocationController, Method: findById called with arguments: [2fedae7b-7677-4034-baee-5351b1dcbefe]
+[INFO ] 2025-01-14 16:11:28.941 [http-nio-8080-exec-9] ControllerLoggingAspect - Controller: LocationController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:28.943 [http-nio-8080-exec-1] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById called with arguments: [8bfa7f17-0c18-45ec-817c-77cb2b439901]
+[INFO ] 2025-01-14 16:11:28.943 [http-nio-8080-exec-7] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById called with arguments: [a8315435-9c5b-4f38-8102-63f56cb9d0f9]
+[INFO ] 2025-01-14 16:11:28.943 [http-nio-8080-exec-10] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById called with arguments: [3fb68426-3735-47e2-b1c6-8030be9f80eb]
+[INFO ] 2025-01-14 16:11:28.946 [http-nio-8080-exec-7] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:28.946 [http-nio-8080-exec-1] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:28.946 [http-nio-8080-exec-10] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:28.946 [http-nio-8080-exec-8] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById called with arguments: [efcccb5e-10d0-44a8-9f60-c92f4ab8b724]
+[INFO ] 2025-01-14 16:11:28.949 [http-nio-8080-exec-8] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:28.950 [http-nio-8080-exec-4] ControllerLoggingAspect - Controller: LocationController, Method: findById called with arguments: [2fedae7b-7677-4034-baee-5351b1dcbefe]
+[INFO ] 2025-01-14 16:11:28.953 [http-nio-8080-exec-4] ControllerLoggingAspect - Controller: LocationController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:28.954 [http-nio-8080-exec-6] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById called with arguments: [a8315435-9c5b-4f38-8102-63f56cb9d0f9]
+[INFO ] 2025-01-14 16:11:28.957 [http-nio-8080-exec-6] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:28.958 [http-nio-8080-exec-3] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById called with arguments: [efcccb5e-10d0-44a8-9f60-c92f4ab8b724]
+[INFO ] 2025-01-14 16:11:28.960 [http-nio-8080-exec-3] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:28.962 [http-nio-8080-exec-2] ControllerLoggingAspect - Controller: LocationController, Method: findById called with arguments: [2fedae7b-7677-4034-baee-5351b1dcbefe]
+[INFO ] 2025-01-14 16:11:28.964 [http-nio-8080-exec-2] ControllerLoggingAspect - Controller: LocationController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:28.964 [http-nio-8080-exec-5] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById called with arguments: [a8315435-9c5b-4f38-8102-63f56cb9d0f9]
+[INFO ] 2025-01-14 16:11:28.967 [http-nio-8080-exec-5] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:28.981 [http-nio-8080-exec-9] ControllerLoggingAspect - Controller: LocationController, Method: findById called with arguments: [2fedae7b-7677-4034-baee-5351b1dcbefe]
+[INFO ] 2025-01-14 16:11:28.985 [http-nio-8080-exec-1] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById called with arguments: [a8315435-9c5b-4f38-8102-63f56cb9d0f9]
+[INFO ] 2025-01-14 16:11:28.985 [http-nio-8080-exec-9] ControllerLoggingAspect - Controller: LocationController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:28.986 [http-nio-8080-exec-7] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById called with arguments: [1665e1ce-7d4b-4ede-b299-0fff51595963]
+[INFO ] 2025-01-14 16:11:28.987 [http-nio-8080-exec-1] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:28.992 [http-nio-8080-exec-7] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:28.995 [http-nio-8080-exec-9] ControllerLoggingAspect - Controller: LocationController, Method: findById called with arguments: [2fedae7b-7677-4034-baee-5351b1dcbefe]
+[INFO ] 2025-01-14 16:11:29.001 [http-nio-8080-exec-9] ControllerLoggingAspect - Controller: LocationController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:29.003 [http-nio-8080-exec-4] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById called with arguments: [a8315435-9c5b-4f38-8102-63f56cb9d0f9]
+[INFO ] 2025-01-14 16:11:29.006 [http-nio-8080-exec-4] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:29.011 [http-nio-8080-exec-6] ControllerLoggingAspect - Controller: LocationController, Method: findById called with arguments: [2fedae7b-7677-4034-baee-5351b1dcbefe]
+[INFO ] 2025-01-14 16:11:29.013 [http-nio-8080-exec-3] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById called with arguments: [a8315435-9c5b-4f38-8102-63f56cb9d0f9]
+[INFO ] 2025-01-14 16:11:29.013 [http-nio-8080-exec-6] ControllerLoggingAspect - Controller: LocationController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:29.016 [http-nio-8080-exec-3] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:29.021 [http-nio-8080-exec-6] ControllerLoggingAspect - Controller: LocationController, Method: findById called with arguments: [2fedae7b-7677-4034-baee-5351b1dcbefe]
+[INFO ] 2025-01-14 16:11:29.023 [http-nio-8080-exec-6] ControllerLoggingAspect - Controller: LocationController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:29.023 [http-nio-8080-exec-5] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById called with arguments: [a8315435-9c5b-4f38-8102-63f56cb9d0f9]
+[INFO ] 2025-01-14 16:11:29.025 [http-nio-8080-exec-5] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:29.030 [http-nio-8080-exec-10] ControllerLoggingAspect - Controller: LocationController, Method: findById called with arguments: [2fedae7b-7677-4034-baee-5351b1dcbefe]
+[INFO ] 2025-01-14 16:11:29.032 [http-nio-8080-exec-8] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById called with arguments: [a8315435-9c5b-4f38-8102-63f56cb9d0f9]
+[INFO ] 2025-01-14 16:11:29.033 [http-nio-8080-exec-10] ControllerLoggingAspect - Controller: LocationController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:29.035 [http-nio-8080-exec-8] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:29.041 [http-nio-8080-exec-1] ControllerLoggingAspect - Controller: LocationController, Method: findById called with arguments: [2fedae7b-7677-4034-baee-5351b1dcbefe]
+[INFO ] 2025-01-14 16:11:29.043 [http-nio-8080-exec-7] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById called with arguments: [a8315435-9c5b-4f38-8102-63f56cb9d0f9]
+[INFO ] 2025-01-14 16:11:29.044 [http-nio-8080-exec-1] ControllerLoggingAspect - Controller: LocationController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:29.045 [http-nio-8080-exec-7] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:29.052 [http-nio-8080-exec-9] ControllerLoggingAspect - Controller: LocationController, Method: findById called with arguments: [2fedae7b-7677-4034-baee-5351b1dcbefe]
+[INFO ] 2025-01-14 16:11:29.055 [http-nio-8080-exec-9] ControllerLoggingAspect - Controller: LocationController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:29.086 [http-nio-8080-exec-4] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById called with arguments: [a8315435-9c5b-4f38-8102-63f56cb9d0f9]
+[INFO ] 2025-01-14 16:11:29.087 [http-nio-8080-exec-2] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById called with arguments: [1665e1ce-7d4b-4ede-b299-0fff51595963]
+[INFO ] 2025-01-14 16:11:29.089 [http-nio-8080-exec-4] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:29.089 [http-nio-8080-exec-2] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:29.097 [http-nio-8080-exec-3] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById called with arguments: [a8315435-9c5b-4f38-8102-63f56cb9d0f9]
+[INFO ] 2025-01-14 16:11:29.099 [http-nio-8080-exec-3] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:29.107 [http-nio-8080-exec-6] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById called with arguments: [a8315435-9c5b-4f38-8102-63f56cb9d0f9]
+[INFO ] 2025-01-14 16:11:29.110 [http-nio-8080-exec-6] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:32.921 [http-nio-8080-exec-8] ControllerLoggingAspect - Controller: TourController, Method: findById called with arguments: [3cdfca1c-75f5-4202-98df-f5e6fb70bd3f]
+[INFO ] 2025-01-14 16:11:32.935 [http-nio-8080-exec-8] ControllerLoggingAspect - Controller: TourController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:32.942 [http-nio-8080-exec-1] ControllerLoggingAspect - Controller: TourController, Method: findById called with arguments: [3cdfca1c-75f5-4202-98df-f5e6fb70bd3f]
+[INFO ] 2025-01-14 16:11:32.944 [http-nio-8080-exec-7] ControllerLoggingAspect - Controller: LocationController, Method: findById called with arguments: [d750981b-0ac0-43cf-906a-7978dda1e9dc]
+[INFO ] 2025-01-14 16:11:32.944 [http-nio-8080-exec-9] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById called with arguments: [98e5c09c-e2a6-4ea6-aadc-13da28e3ed8a]
+[INFO ] 2025-01-14 16:11:32.945 [http-nio-8080-exec-1] ControllerLoggingAspect - Controller: TourController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:32.946 [http-nio-8080-exec-7] ControllerLoggingAspect - Controller: LocationController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:32.947 [http-nio-8080-exec-9] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:32.956 [http-nio-8080-exec-2] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById called with arguments: [98e5c09c-e2a6-4ea6-aadc-13da28e3ed8a]
+[INFO ] 2025-01-14 16:11:32.956 [http-nio-8080-exec-4] ControllerLoggingAspect - Controller: LocationController, Method: findById called with arguments: [d750981b-0ac0-43cf-906a-7978dda1e9dc]
+[INFO ] 2025-01-14 16:11:32.957 [http-nio-8080-exec-2] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:32.957 [http-nio-8080-exec-4] ControllerLoggingAspect - Controller: LocationController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:34.320 [http-nio-8080-exec-3] ControllerLoggingAspect - Controller: TourController, Method: findAllAvailableSortedBy called with arguments: [Page request [number: 0, size 16, sort: tourId: ASC], ]
+[INFO ] 2025-01-14 16:11:34.329 [http-nio-8080-exec-3] ControllerLoggingAspect - Controller: TourController, Method: findAllAvailableSortedBy executed successfully
+[INFO ] 2025-01-14 16:11:34.336 [http-nio-8080-exec-6] ControllerLoggingAspect - Controller: TourController, Method: findAllAvailableSortedBy called with arguments: [Page request [number: 0, size 16, sort: tourId: ASC], ]
+[INFO ] 2025-01-14 16:11:34.342 [http-nio-8080-exec-10] ControllerLoggingAspect - Controller: LocationController, Method: findById called with arguments: [d750981b-0ac0-43cf-906a-7978dda1e9dc]
+[INFO ] 2025-01-14 16:11:34.342 [http-nio-8080-exec-5] ControllerLoggingAspect - Controller: LocationController, Method: findById called with arguments: [aba9997c-cd6b-46b5-abfd-e8b40b39e032]
+[INFO ] 2025-01-14 16:11:34.343 [http-nio-8080-exec-1] ControllerLoggingAspect - Controller: LocationController, Method: findById called with arguments: [75e720cc-15fa-49d8-9663-1ea4dc2f4d93]
+[INFO ] 2025-01-14 16:11:34.343 [http-nio-8080-exec-8] ControllerLoggingAspect - Controller: LocationController, Method: findById called with arguments: [2fedae7b-7677-4034-baee-5351b1dcbefe]
+[INFO ] 2025-01-14 16:11:34.344 [http-nio-8080-exec-5] ControllerLoggingAspect - Controller: LocationController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:34.344 [http-nio-8080-exec-10] ControllerLoggingAspect - Controller: LocationController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:34.345 [http-nio-8080-exec-1] ControllerLoggingAspect - Controller: LocationController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:34.345 [http-nio-8080-exec-8] ControllerLoggingAspect - Controller: LocationController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:34.347 [http-nio-8080-exec-6] ControllerLoggingAspect - Controller: TourController, Method: findAllAvailableSortedBy executed successfully
+[INFO ] 2025-01-14 16:11:34.354 [http-nio-8080-exec-7] ControllerLoggingAspect - Controller: LocationController, Method: findById called with arguments: [d750981b-0ac0-43cf-906a-7978dda1e9dc]
+[INFO ] 2025-01-14 16:11:34.354 [http-nio-8080-exec-4] ControllerLoggingAspect - Controller: LocationController, Method: findById called with arguments: [2fedae7b-7677-4034-baee-5351b1dcbefe]
+[INFO ] 2025-01-14 16:11:34.354 [http-nio-8080-exec-2] ControllerLoggingAspect - Controller: LocationController, Method: findById called with arguments: [75e720cc-15fa-49d8-9663-1ea4dc2f4d93]
+[INFO ] 2025-01-14 16:11:34.354 [http-nio-8080-exec-9] ControllerLoggingAspect - Controller: LocationController, Method: findById called with arguments: [aba9997c-cd6b-46b5-abfd-e8b40b39e032]
+[INFO ] 2025-01-14 16:11:34.356 [http-nio-8080-exec-2] ControllerLoggingAspect - Controller: LocationController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:34.356 [http-nio-8080-exec-9] ControllerLoggingAspect - Controller: LocationController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:34.356 [http-nio-8080-exec-4] ControllerLoggingAspect - Controller: LocationController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:34.356 [http-nio-8080-exec-7] ControllerLoggingAspect - Controller: LocationController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:34.361 [http-nio-8080-exec-5] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById called with arguments: [a8315435-9c5b-4f38-8102-63f56cb9d0f9]
+[INFO ] 2025-01-14 16:11:34.361 [http-nio-8080-exec-3] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById called with arguments: [98e5c09c-e2a6-4ea6-aadc-13da28e3ed8a]
+[INFO ] 2025-01-14 16:11:34.364 [http-nio-8080-exec-3] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:34.365 [http-nio-8080-exec-5] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:34.371 [http-nio-8080-exec-1] ControllerLoggingAspect - Controller: LocationController, Method: findById called with arguments: [2fedae7b-7677-4034-baee-5351b1dcbefe]
+[INFO ] 2025-01-14 16:11:34.371 [http-nio-8080-exec-10] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById called with arguments: [efcccb5e-10d0-44a8-9f60-c92f4ab8b724]
+[INFO ] 2025-01-14 16:11:34.371 [http-nio-8080-exec-6] ControllerLoggingAspect - Controller: LocationController, Method: findById called with arguments: [d750981b-0ac0-43cf-906a-7978dda1e9dc]
+[INFO ] 2025-01-14 16:11:34.371 [http-nio-8080-exec-8] ControllerLoggingAspect - Controller: LocationController, Method: findById called with arguments: [aba9997c-cd6b-46b5-abfd-e8b40b39e032]
+[INFO ] 2025-01-14 16:11:34.373 [http-nio-8080-exec-8] ControllerLoggingAspect - Controller: LocationController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:34.373 [http-nio-8080-exec-10] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:34.373 [http-nio-8080-exec-6] ControllerLoggingAspect - Controller: LocationController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:34.373 [http-nio-8080-exec-1] ControllerLoggingAspect - Controller: LocationController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:34.377 [http-nio-8080-exec-2] ControllerLoggingAspect - Controller: LocationController, Method: findById called with arguments: [75e720cc-15fa-49d8-9663-1ea4dc2f4d93]
+[INFO ] 2025-01-14 16:11:34.377 [http-nio-8080-exec-7] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById called with arguments: [a8315435-9c5b-4f38-8102-63f56cb9d0f9]
+[INFO ] 2025-01-14 16:11:34.380 [http-nio-8080-exec-2] ControllerLoggingAspect - Controller: LocationController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:34.380 [http-nio-8080-exec-7] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:34.384 [http-nio-8080-exec-9] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById called with arguments: [3fb68426-3735-47e2-b1c6-8030be9f80eb]
+[INFO ] 2025-01-14 16:11:34.384 [http-nio-8080-exec-4] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById called with arguments: [8bfa7f17-0c18-45ec-817c-77cb2b439901]
+[INFO ] 2025-01-14 16:11:34.384 [http-nio-8080-exec-3] ControllerLoggingAspect - Controller: LocationController, Method: findById called with arguments: [aba9997c-cd6b-46b5-abfd-e8b40b39e032]
+[INFO ] 2025-01-14 16:11:34.384 [http-nio-8080-exec-5] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById called with arguments: [efcccb5e-10d0-44a8-9f60-c92f4ab8b724]
+[INFO ] 2025-01-14 16:11:34.386 [http-nio-8080-exec-9] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:34.386 [http-nio-8080-exec-5] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:34.386 [http-nio-8080-exec-4] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:34.386 [http-nio-8080-exec-3] ControllerLoggingAspect - Controller: LocationController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:34.391 [http-nio-8080-exec-10] ControllerLoggingAspect - Controller: LocationController, Method: findById called with arguments: [d750981b-0ac0-43cf-906a-7978dda1e9dc]
+[INFO ] 2025-01-14 16:11:34.391 [http-nio-8080-exec-6] ControllerLoggingAspect - Controller: LocationController, Method: findById called with arguments: [2fedae7b-7677-4034-baee-5351b1dcbefe]
+[INFO ] 2025-01-14 16:11:34.393 [http-nio-8080-exec-10] ControllerLoggingAspect - Controller: LocationController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:34.393 [http-nio-8080-exec-6] ControllerLoggingAspect - Controller: LocationController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:34.397 [http-nio-8080-exec-2] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById called with arguments: [98e5c09c-e2a6-4ea6-aadc-13da28e3ed8a]
+[INFO ] 2025-01-14 16:11:34.397 [http-nio-8080-exec-8] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById called with arguments: [a8315435-9c5b-4f38-8102-63f56cb9d0f9]
+[INFO ] 2025-01-14 16:11:34.397 [http-nio-8080-exec-1] ControllerLoggingAspect - Controller: LocationController, Method: findById called with arguments: [75e720cc-15fa-49d8-9663-1ea4dc2f4d93]
+[INFO ] 2025-01-14 16:11:34.397 [http-nio-8080-exec-7] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById called with arguments: [efcccb5e-10d0-44a8-9f60-c92f4ab8b724]
+[INFO ] 2025-01-14 16:11:34.400 [http-nio-8080-exec-1] ControllerLoggingAspect - Controller: LocationController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:34.400 [http-nio-8080-exec-8] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:34.400 [http-nio-8080-exec-2] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:34.400 [http-nio-8080-exec-7] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:34.403 [http-nio-8080-exec-4] ControllerLoggingAspect - Controller: LocationController, Method: findById called with arguments: [2fedae7b-7677-4034-baee-5351b1dcbefe]
+[INFO ] 2025-01-14 16:11:34.406 [http-nio-8080-exec-4] ControllerLoggingAspect - Controller: LocationController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:34.408 [http-nio-8080-exec-3] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById called with arguments: [3fb68426-3735-47e2-b1c6-8030be9f80eb]
+[INFO ] 2025-01-14 16:11:34.409 [http-nio-8080-exec-9] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById called with arguments: [efcccb5e-10d0-44a8-9f60-c92f4ab8b724]
+[INFO ] 2025-01-14 16:11:34.409 [http-nio-8080-exec-5] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById called with arguments: [a8315435-9c5b-4f38-8102-63f56cb9d0f9]
+[INFO ] 2025-01-14 16:11:34.411 [http-nio-8080-exec-3] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:34.411 [http-nio-8080-exec-9] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:34.411 [http-nio-8080-exec-5] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:34.415 [http-nio-8080-exec-10] ControllerLoggingAspect - Controller: LocationController, Method: findById called with arguments: [2fedae7b-7677-4034-baee-5351b1dcbefe]
+[INFO ] 2025-01-14 16:11:34.415 [http-nio-8080-exec-6] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById called with arguments: [8bfa7f17-0c18-45ec-817c-77cb2b439901]
+[INFO ] 2025-01-14 16:11:34.417 [http-nio-8080-exec-10] ControllerLoggingAspect - Controller: LocationController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:34.417 [http-nio-8080-exec-6] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:34.419 [http-nio-8080-exec-1] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById called with arguments: [a8315435-9c5b-4f38-8102-63f56cb9d0f9]
+[INFO ] 2025-01-14 16:11:34.422 [http-nio-8080-exec-1] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:34.424 [http-nio-8080-exec-8] ControllerLoggingAspect - Controller: LocationController, Method: findById called with arguments: [2fedae7b-7677-4034-baee-5351b1dcbefe]
+[INFO ] 2025-01-14 16:11:34.426 [http-nio-8080-exec-8] ControllerLoggingAspect - Controller: LocationController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:34.428 [http-nio-8080-exec-7] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById called with arguments: [a8315435-9c5b-4f38-8102-63f56cb9d0f9]
+[INFO ] 2025-01-14 16:11:34.430 [http-nio-8080-exec-7] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:34.434 [http-nio-8080-exec-2] ControllerLoggingAspect - Controller: LocationController, Method: findById called with arguments: [2fedae7b-7677-4034-baee-5351b1dcbefe]
+[INFO ] 2025-01-14 16:11:34.435 [http-nio-8080-exec-2] ControllerLoggingAspect - Controller: LocationController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:34.437 [http-nio-8080-exec-4] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById called with arguments: [1665e1ce-7d4b-4ede-b299-0fff51595963]
+[INFO ] 2025-01-14 16:11:34.437 [http-nio-8080-exec-9] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById called with arguments: [a8315435-9c5b-4f38-8102-63f56cb9d0f9]
+[INFO ] 2025-01-14 16:11:34.439 [http-nio-8080-exec-4] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:34.439 [http-nio-8080-exec-9] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:34.444 [http-nio-8080-exec-5] ControllerLoggingAspect - Controller: LocationController, Method: findById called with arguments: [2fedae7b-7677-4034-baee-5351b1dcbefe]
+[INFO ] 2025-01-14 16:11:34.446 [http-nio-8080-exec-5] ControllerLoggingAspect - Controller: LocationController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:34.446 [http-nio-8080-exec-3] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById called with arguments: [a8315435-9c5b-4f38-8102-63f56cb9d0f9]
+[INFO ] 2025-01-14 16:11:34.448 [http-nio-8080-exec-3] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:34.452 [http-nio-8080-exec-6] ControllerLoggingAspect - Controller: LocationController, Method: findById called with arguments: [2fedae7b-7677-4034-baee-5351b1dcbefe]
+[INFO ] 2025-01-14 16:11:34.454 [http-nio-8080-exec-6] ControllerLoggingAspect - Controller: LocationController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:34.455 [http-nio-8080-exec-10] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById called with arguments: [a8315435-9c5b-4f38-8102-63f56cb9d0f9]
+[INFO ] 2025-01-14 16:11:34.458 [http-nio-8080-exec-10] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:34.462 [http-nio-8080-exec-1] ControllerLoggingAspect - Controller: LocationController, Method: findById called with arguments: [2fedae7b-7677-4034-baee-5351b1dcbefe]
+[INFO ] 2025-01-14 16:11:34.463 [http-nio-8080-exec-1] ControllerLoggingAspect - Controller: LocationController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:34.464 [http-nio-8080-exec-8] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById called with arguments: [a8315435-9c5b-4f38-8102-63f56cb9d0f9]
+[INFO ] 2025-01-14 16:11:34.466 [http-nio-8080-exec-8] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:34.471 [http-nio-8080-exec-1] ControllerLoggingAspect - Controller: LocationController, Method: findById called with arguments: [2fedae7b-7677-4034-baee-5351b1dcbefe]
+[INFO ] 2025-01-14 16:11:34.472 [http-nio-8080-exec-1] ControllerLoggingAspect - Controller: LocationController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:34.478 [http-nio-8080-exec-2] ControllerLoggingAspect - Controller: LocationController, Method: findById called with arguments: [2fedae7b-7677-4034-baee-5351b1dcbefe]
+[INFO ] 2025-01-14 16:11:34.480 [http-nio-8080-exec-2] ControllerLoggingAspect - Controller: LocationController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:34.488 [http-nio-8080-exec-4] ControllerLoggingAspect - Controller: LocationController, Method: findById called with arguments: [2fedae7b-7677-4034-baee-5351b1dcbefe]
+[INFO ] 2025-01-14 16:11:34.488 [http-nio-8080-exec-9] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById called with arguments: [a8315435-9c5b-4f38-8102-63f56cb9d0f9]
+[INFO ] 2025-01-14 16:11:34.490 [http-nio-8080-exec-4] ControllerLoggingAspect - Controller: LocationController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:34.490 [http-nio-8080-exec-9] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:34.497 [http-nio-8080-exec-5] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById called with arguments: [a8315435-9c5b-4f38-8102-63f56cb9d0f9]
+[INFO ] 2025-01-14 16:11:34.498 [http-nio-8080-exec-5] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:34.500 [http-nio-8080-exec-3] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById called with arguments: [1665e1ce-7d4b-4ede-b299-0fff51595963]
+[INFO ] 2025-01-14 16:11:34.502 [http-nio-8080-exec-3] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:34.505 [http-nio-8080-exec-6] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById called with arguments: [a8315435-9c5b-4f38-8102-63f56cb9d0f9]
+[INFO ] 2025-01-14 16:11:34.506 [http-nio-8080-exec-6] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:34.513 [http-nio-8080-exec-10] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById called with arguments: [a8315435-9c5b-4f38-8102-63f56cb9d0f9]
+[INFO ] 2025-01-14 16:11:34.515 [http-nio-8080-exec-10] ControllerLoggingAspect - Controller: TransferTypeController, Method: findById executed successfully
+[INFO ] 2025-01-14 16:11:35.116 [http-nio-8080-exec-1] ControllerLoggingAspect - Controller: TourController, Method: findAllSortedBy called with arguments: [Page request [number: 0, size 10, sort: tourId: ASC], ]
+[INFO ] 2025-01-14 16:11:35.126 [http-nio-8080-exec-1] ControllerLoggingAspect - Controller: TourController, Method: findAllSortedBy executed successfully
+[INFO ] 2025-01-14 16:11:35.134 [http-nio-8080-exec-2] ControllerLoggingAspect - Controller: TourController, Method: findAllSortedBy called with arguments: [Page request [number: 0, size 10, sort: tourId: ASC], ]
+[INFO ] 2025-01-14 16:11:35.144 [http-nio-8080-exec-2] ControllerLoggingAspect - Controller: TourController, Method: findAllSortedBy executed successfully
+[INFO ] 2025-01-14 16:11:42.875 [http-nio-8080-exec-5] ControllerLoggingAspect - Controller: TransferTypeController, Method: getAllTransferType called with arguments: [Page request [number: 0, size 10, sort: transferTypeId: ASC], ]
+[INFO ] 2025-01-14 16:11:42.878 [http-nio-8080-exec-5] ControllerLoggingAspect - Controller: TransferTypeController, Method: getAllTransferType executed successfully
+[INFO ] 2025-01-14 16:11:42.885 [http-nio-8080-exec-3] ControllerLoggingAspect - Controller: TransferTypeController, Method: getAllTransferType called with arguments: [Page request [number: 0, size 10, sort: transferTypeId: ASC], ]
+[INFO ] 2025-01-14 16:11:42.888 [http-nio-8080-exec-3] ControllerLoggingAspect - Controller: TransferTypeController, Method: getAllTransferType executed successfully
+[INFO ] 2025-01-14 16:11:45.729 [http-nio-8080-exec-10] ControllerLoggingAspect - Controller: TransferTypeController, Method: deleteById called with arguments: [0cfe751b-f088-40b0-8904-24aeb1b07d1f]
+[INFO ] 2025-01-14 16:11:45.757 [http-nio-8080-exec-10] ControllerLoggingAspect - Controller: TransferTypeController, Method: deleteById executed successfully
+[INFO ] 2025-01-14 16:11:58.441 [http-nio-8080-exec-7] ControllerLoggingAspect - Controller: TransferTypeController, Method: getAllTransferType called with arguments: [Page request [number: 0, size 10, sort: transferTypeId: ASC], ]
+[INFO ] 2025-01-14 16:11:58.444 [http-nio-8080-exec-7] ControllerLoggingAspect - Controller: TransferTypeController, Method: getAllTransferType executed successfully
+[INFO ] 2025-01-14 16:11:58.451 [http-nio-8080-exec-8] ControllerLoggingAspect - Controller: TransferTypeController, Method: getAllTransferType called with arguments: [Page request [number: 0, size 10, sort: transferTypeId: ASC], ]
+[INFO ] 2025-01-14 16:11:58.455 [http-nio-8080-exec-8] ControllerLoggingAspect - Controller: TransferTypeController, Method: getAllTransferType executed successfully
+[INFO ] 2025-01-14 16:12:18.971 [http-nio-8080-exec-2] ControllerLoggingAspect - Controller: TransferTypeController, Method: getAllTransferType called with arguments: [Page request [number: 1, size 10, sort: transferTypeId: ASC], ]
+[INFO ] 2025-01-14 16:12:18.974 [http-nio-8080-exec-2] ControllerLoggingAspect - Controller: TransferTypeController, Method: getAllTransferType executed successfully
+[INFO ] 2025-01-14 16:12:20.548 [http-nio-8080-exec-4] ControllerLoggingAspect - Controller: TransferTypeController, Method: getAllTransferType called with arguments: [Page request [number: 2, size 10, sort: transferTypeId: ASC], ]
+[INFO ] 2025-01-14 16:12:20.551 [http-nio-8080-exec-4] ControllerLoggingAspect - Controller: TransferTypeController, Method: getAllTransferType executed successfully
+[INFO ] 2025-01-14 16:12:21.932 [http-nio-8080-exec-3] ControllerLoggingAspect - Controller: TransferTypeController, Method: getAllTransferType called with arguments: [Page request [number: 4, size 10, sort: transferTypeId: ASC], ]
+[INFO ] 2025-01-14 16:12:21.935 [http-nio-8080-exec-3] ControllerLoggingAspect - Controller: TransferTypeController, Method: getAllTransferType executed successfully
+[INFO ] 2025-01-14 16:12:22.816 [http-nio-8080-exec-10] ControllerLoggingAspect - Controller: TransferTypeController, Method: getAllTransferType called with arguments: [Page request [number: 5, size 10, sort: transferTypeId: ASC], ]
+[INFO ] 2025-01-14 16:12:22.818 [http-nio-8080-exec-10] ControllerLoggingAspect - Controller: TransferTypeController, Method: getAllTransferType executed successfully
+[INFO ] 2025-01-14 16:12:24.122 [http-nio-8080-exec-7] ControllerLoggingAspect - Controller: TransferTypeController, Method: getAllTransferType called with arguments: [Page request [number: 4, size 10, sort: transferTypeId: ASC], ]
+[INFO ] 2025-01-14 16:12:24.126 [http-nio-8080-exec-7] ControllerLoggingAspect - Controller: TransferTypeController, Method: getAllTransferType executed successfully
+[INFO ] 2025-01-14 16:12:28.451 [http-nio-8080-exec-1] ControllerLoggingAspect - Controller: TransferTypeController, Method: getAllTransferType called with arguments: [Page request [number: 3, size 10, sort: transferTypeId: ASC], ]
+[INFO ] 2025-01-14 16:12:28.453 [http-nio-8080-exec-1] ControllerLoggingAspect - Controller: TransferTypeController, Method: getAllTransferType executed successfully
+[INFO ] 2025-01-14 16:12:33.710 [http-nio-8080-exec-9] ControllerLoggingAspect - Controller: TransferTypeController, Method: deleteById called with arguments: [98e5c09c-e2a6-4ea6-aadc-13da28e3ed8a]
+[WARN ] 2025-01-14 16:12:33.759 [http-nio-8080-exec-9] SqlExceptionHelper - SQL Error: 0, SQLState: 23503
+[ERROR] 2025-01-14 16:12:33.759 [http-nio-8080-exec-9] SqlExceptionHelper - ПОМИЛКА: update або delete в таблиці "transfer_type" порушує обмеження зовнішнього ключа "fk17xnlvghuuajri7c9b8vbrupx" таблиці "tour"
+  Detail: На ключ (transfer_type_id)=(98e5c09c-e2a6-4ea6-aadc-13da28e3ed8a) все ще є посилання в таблиці "tour".
+[ERROR] 2025-01-14 16:12:33.767 [http-nio-8080-exec-9] ControllerLoggingAspect - Controller: TransferTypeController, Method: deleteById threw an exception: could not execute statement [ПОМИЛКА: update або delete в таблиці "transfer_type" порушує обмеження зовнішнього ключа "fk17xnlvghuuajri7c9b8vbrupx" таблиці "tour"
+  Detail: На ключ (transfer_type_id)=(98e5c09c-e2a6-4ea6-aadc-13da28e3ed8a) все ще є посилання в таблиці "tour".] [delete from transfer_type where transfer_type_id=?]; SQL [delete from transfer_type where transfer_type_id=?]; constraint [null]
+[ERROR] 2025-01-14 16:12:33.768 [http-nio-8080-exec-9] [dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.dao.DataIntegrityViolationException: could not execute statement [ПОМИЛКА: update або delete в таблиці "transfer_type" порушує обмеження зовнішнього ключа "fk17xnlvghuuajri7c9b8vbrupx" таблиці "tour"
+  Detail: На ключ (transfer_type_id)=(98e5c09c-e2a6-4ea6-aadc-13da28e3ed8a) все ще є посилання в таблиці "tour".] [delete from transfer_type where transfer_type_id=?]; SQL [delete from transfer_type where transfer_type_id=?]; constraint [null]] with root cause
+org.postgresql.util.PSQLException: ПОМИЛКА: update або delete в таблиці "transfer_type" порушує обмеження зовнішнього ключа "fk17xnlvghuuajri7c9b8vbrupx" таблиці "tour"
+  Detail: На ключ (transfer_type_id)=(98e5c09c-e2a6-4ea6-aadc-13da28e3ed8a) все ще є посилання в таблиці "tour".
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2713) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2401) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:368) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:498) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:415) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:190) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:152) ~[postgresql-42.6.0.jar:42.6.0]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java) ~[HikariCP-5.0.1.jar:?]
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:194) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.performNonBatchedMutation(AbstractMutationExecutor.java:107) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.mutation.internal.MutationExecutorSingleNonBatched.performNonBatchedOperations(MutationExecutorSingleNonBatched.java:40) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:52) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.persister.entity.mutation.AbstractDeleteCoordinator.doStaticDelete(AbstractDeleteCoordinator.java:279) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.persister.entity.mutation.AbstractDeleteCoordinator.coordinateDelete(AbstractDeleteCoordinator.java:87) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.delete(AbstractEntityPersister.java:2979) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.action.internal.EntityDeleteAction.execute(EntityDeleteAction.java:131) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:632) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:499) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:363) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:41) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1423) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:504) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:2339) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:1996) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:439) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:169) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:267) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:101) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:561) ~[spring-orm-6.1.2.jar:6.1.2]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:794) ~[spring-tx-6.1.2.jar:6.1.2]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:757) ~[spring-tx-6.1.2.jar:6.1.2]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:669) ~[spring-tx-6.1.2.jar:6.1.2]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:419) ~[spring-tx-6.1.2.jar:6.1.2]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:164) ~[spring-data-jpa-3.2.1.jar:3.2.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:249) ~[spring-aop-6.1.2.jar:6.1.2]
+	at jdk.proxy2/jdk.proxy2.$Proxy159.deleteById(Unknown Source) ~[?:?]
+	at com.denys.travel_agency.service.TransferTypeServiceImpl.deleteById(TransferTypeServiceImpl.java:44) ~[classes/:?]
+	at com.denys.travel_agency.controller.TransferTypeController.deleteById(TransferTypeController.java:70) ~[classes/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:352) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.aspectj.AspectJAfterThrowingAdvice.invoke(AspectJAfterThrowingAdvice.java:64) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:57) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.security.authorization.method.AuthorizationManagerBeforeMethodInterceptor.invoke(AuthorizationManagerBeforeMethodInterceptor.java:198) ~[spring-security-core-6.2.1.jar:6.2.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:717) ~[spring-aop-6.1.2.jar:6.1.2]
+	at com.denys.travel_agency.controller.TransferTypeController$$SpringCGLIB$$0.deleteById(<generated>) ~[classes/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:262) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:190) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:917) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:829) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at org.springframework.web.servlet.FrameworkServlet.doDelete(FrameworkServlet.java:936) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:596) ~[tomcat-embed-core-10.1.17.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.17.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at com.denys.travel_agency.token.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:54) ~[classes/:?]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:225) ~[spring-security-config-6.2.1.jar:6.2.1]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+[INFO ] 2025-01-14 16:12:36.185 [http-nio-8080-exec-10] ControllerLoggingAspect - Controller: TransferTypeController, Method: getAllTransferType called with arguments: [Page request [number: 0, size 10, sort: transferTypeId: ASC], ]
+[INFO ] 2025-01-14 16:12:36.187 [http-nio-8080-exec-10] ControllerLoggingAspect - Controller: TransferTypeController, Method: getAllTransferType executed successfully
+[INFO ] 2025-01-14 16:12:36.194 [http-nio-8080-exec-7] ControllerLoggingAspect - Controller: TransferTypeController, Method: getAllTransferType called with arguments: [Page request [number: 0, size 10, sort: transferTypeId: ASC], ]
+[INFO ] 2025-01-14 16:12:36.197 [http-nio-8080-exec-7] ControllerLoggingAspect - Controller: TransferTypeController, Method: getAllTransferType executed successfully
+[INFO ] 2025-01-14 16:12:39.315 [http-nio-8080-exec-1] ControllerLoggingAspect - Controller: TransferTypeController, Method: getAllTransferType called with arguments: [Page request [number: 0, size 10, sort: transferTypeId: ASC], C]
+[INFO ] 2025-01-14 16:12:39.317 [http-nio-8080-exec-1] ControllerLoggingAspect - Controller: TransferTypeController, Method: getAllTransferType executed successfully
+[INFO ] 2025-01-14 16:12:40.001 [http-nio-8080-exec-9] ControllerLoggingAspect - Controller: TransferTypeController, Method: getAllTransferType called with arguments: [Page request [number: 0, size 10, sort: transferTypeId: ASC], Ca]
+[INFO ] 2025-01-14 16:12:40.002 [http-nio-8080-exec-9] ControllerLoggingAspect - Controller: TransferTypeController, Method: getAllTransferType executed successfully
+[INFO ] 2025-01-14 16:12:40.991 [http-nio-8080-exec-4] ControllerLoggingAspect - Controller: TransferTypeController, Method: getAllTransferType called with arguments: [Page request [number: 0, size 10, sort: transferTypeId: ASC], C]
+[INFO ] 2025-01-14 16:12:40.992 [http-nio-8080-exec-4] ControllerLoggingAspect - Controller: TransferTypeController, Method: getAllTransferType executed successfully
