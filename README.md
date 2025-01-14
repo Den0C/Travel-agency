@@ -1,2 +1,2 @@
 # travel-agency
-details about the project in the readme file
+In this project, I used the Spring Framework. I implemented authentication and authorization using JWT tokens and created roles such as Administrator, Manager, and Registered User. I utilized Spring AOP to log the application, implemented data validation, and developed an error handler to capture and manage errors. Additionally, I implemented pagination, sorting, and search functionality by product name. For the database, I used PostgreSQL and employed Spring Data JPA for database interactions. For logging to a file and the console, I used Log4j2. I also structured the application by dividing it into different packages and separated the business logic from other layers.
