@@ -3,13 +3,16 @@ package com.denys.travel_agency.service;
 import com.denys.travel_agency.dto.TransferTypeDTO;
 import com.denys.travel_agency.exeption.EntityNotFoundException;
 import com.denys.travel_agency.mapper.TransferTypeMapper;
+import com.denys.travel_agency.model.TransferType;
 import com.denys.travel_agency.repository.TransferTypeRepository;
 import com.denys.travel_agency.service.serviceinterface.TransferTypeService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
 import java.util.UUID;
 
 @Service
@@ -38,13 +41,18 @@ public class TransferTypeServiceImpl implements TransferTypeService {
     }
 
     @Override
-    public TransferTypeDTO deleteById(UUID transferTypeId) throws EntityNotFoundException {
-        if (transferTypeRepository.existsById(transferTypeId)) {
-            TransferTypeDTO deletedTransferTypeDTO = transferTypeMapper.toTransferTypeDTO(transferTypeRepository.findById(transferTypeId).get());
-            transferTypeRepository.deleteById(transferTypeId);
-            return deletedTransferTypeDTO;
+    public TransferTypeDTO deleteById(UUID transferTypeId) throws EntityNotFoundException, DataIntegrityViolationException {
+        Optional<TransferType> transferTypeOpt = transferTypeRepository.findById(transferTypeId);
+        if (transferTypeOpt.isEmpty()) {
+            throw new EntityNotFoundException("TransferType with current id is absent");
         }
-        throw new EntityNotFoundException("TransferType with current id is absent");
+        TransferTypeDTO deletedTransferTypeDTO = transferTypeMapper.toTransferTypeDTO(transferTypeOpt.get());
+        try {
+            transferTypeRepository.deleteById(transferTypeId);
+        } catch (DataIntegrityViolationException e) {
+            throw new DataIntegrityViolationException("Cannot delete TransferType due to existing references in other entities");
+        }
+        return deletedTransferTypeDTO;
     }
 
     @Override

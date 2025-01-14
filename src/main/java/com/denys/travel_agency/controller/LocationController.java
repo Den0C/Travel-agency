@@ -12,6 +12,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.MessageSource;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
@@ -113,7 +114,7 @@ public class LocationController {
             @Parameter(description = "ID of the location to delete") @PathVariable String locationId
             //@RequestHeader(name = "Accept-Language", defaultValue = "en") String lang
     )
-            throws IllegalArgumentException, EntityNotFoundException {
+            throws EntityNotFoundException {
 
         UUID uuid = UUID.fromString(locationId);
         return ResponseEntity.ok(

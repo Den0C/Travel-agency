@@ -5,6 +5,7 @@ import com.denys.travel_agency.dto.MyApiResponse;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.context.support.DefaultMessageSourceResolvable;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;
@@ -51,6 +52,18 @@ public class ApiExceptionHandler {
     @ExceptionHandler(IllegalArgumentException.class)
     public ResponseEntity<MyApiResponse<Object>> handleIllegalArgumentException(
             IllegalArgumentException ex) {
+
+        logger.error("Illegal argument: {}", ex.getMessage());
+
+        return new ResponseEntity<>(MyApiResponse.builder()
+                .statusCode(HttpStatus.BAD_REQUEST.name())
+                .statusMessage(ex.getMessage())
+                .build(), HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler(DataIntegrityViolationException.class)
+    public ResponseEntity<MyApiResponse<Object>> handleDataIntegrityViolationException(
+            DataIntegrityViolationException ex) {
 
         logger.error("Illegal argument: {}", ex.getMessage());
 

@@ -7,6 +7,7 @@ import com.denys.travel_agency.exeption.EntityNotFoundException;
 import com.denys.travel_agency.service.serviceinterface.TransferTypeService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
@@ -61,7 +62,7 @@ public class TransferTypeController {
     @PreAuthorize("hasAuthority('ADMIN_DELETE')")
     @DeleteMapping("/delete/{transferTypeId}")
     public ResponseEntity<MyApiResponse<TransferTypeDTO>> deleteById(@PathVariable String transferTypeId)
-            throws IllegalArgumentException, EntityNotFoundException {
+            throws EntityNotFoundException{
         UUID uuid = UUID.fromString(transferTypeId);
         return ResponseEntity.ok(
                 MyApiResponse.<TransferTypeDTO>builder()
